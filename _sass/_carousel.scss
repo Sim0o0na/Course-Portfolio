@@ -1,0 +1,55 @@
+.carousel {
+    position: relative;
+	width: 100vw;
+	height: 100vh;
+}
+
+.slide {
+	position: absolute;
+    z-index: 1;
+    overflow: hidden;
+	transition: opacity 1s;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+	background: no-repeat center fixed;
+    background-size: cover;
+} 
+
+.carousel input {
+	display: none !important;
+}
+.carousel input + label {
+    position: absolute;
+	display: block;
+    z-index: 3;
+    bottom: 0;
+    left: 38%;
+    height: 10%;
+    margin-left: -20em;
+}
+.carousel input + label:before {
+	position: absolute;
+	content: "";
+	padding: 0.5em;
+	box-shadow: 3px -3px 0 0.5px white inset;
+	border: solid transparent;
+	transform: rotate(45deg);
+}
+.carousel input:checked + label {
+	display: none;
+}
+.carousel input:checked ~ input + label {
+	margin-left: 50%;
+}
+.carousel input:checked ~ input + label:before {
+	transform: rotate(225deg); 
+}
+.carousel input:checked + label + div + input + label {
+	z-index: 4;
+} 
+.carousel input:checked + label + div {
+	z-index: 2;
+	transition: opacity 1s;
+	opacity: 1;
+}

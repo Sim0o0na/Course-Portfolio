@@ -1,0 +1,30 @@
+.image-description {
+    color: white;
+    width: 40em;
+    position: absolute;
+    bottom: 5em;
+    left: 10%;
+
+    .image-group-technology {
+        border: 3px solid white;
+        display: inline-block;
+        padding: 0.5em;
+        text-transform: uppercase;
+    }
+
+    .image-paragraphs {
+        display: flex;
+
+        p {
+            margin-right: 2em;
+            display: flex;
+            align-content: center;
+            align-items: center;
+        }
+
+        .far {
+            font-size: 0.5em;
+            margin-right: 5px;
+        }
+    }
+}

@@ -1,0 +1,6 @@
+title: Programming Basics
+description: Get started for free now!
+
+sass:
+  style: compact
+  sass_dir: _sass
