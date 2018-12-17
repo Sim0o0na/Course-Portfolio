@@ -1,51 +1,7 @@
 @import url('/assets/fontawesome/css/all.css');
 @import '_reset';
-@import 'index';
 @import '_typography';
 @import '_carousel';
-
-html, body {
-    height: 100%;
-}
-
-nav {
-    width: 100vw;
-    background-color: rgba(black, 0.4);
-    margin: 0 auto;
-    padding: 0.5rem;
-    letter-spacing: 1px;
-    position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    z-index: 5;
-
-    ul, a {
-        margin: 1rem;
-        z-index: 5;
-    }
-
-    a {
-        text-decoration: none;
-        color: white;
-    }
-
-    ul {
-        display: flex;
-
-        li {
-            list-style: none;
-            margin-left: 1rem;
-            color: white;
-
-            &:hover, span {
-                color: orange;
-            }
-
-            i {
-                margin-left: 5px;
-            }
-        }
-    }
-}
-
+@import 'feedback';
+@import 'index';
+@import '_forms';

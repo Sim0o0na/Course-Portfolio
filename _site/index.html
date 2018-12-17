@@ -3,8 +3,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Programming Basics</title>
+  <title></title>
   <link rel="stylesheet" href="assets/css/styles.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 <body>
     <header class="index-header">
@@ -13,12 +14,11 @@
     <ul>
         <li>Team<i class="fas fa-angle-down"></i></li>
         <li>Instances</li>
-        <li><span>Leave your feedback!</span></li>
+        <li><span><a href="/feedback.html">Leave your feedback!</a></span></li>
     </ul>
 </nav>
 </header>
 <section class="carousel">
-
     <input type="radio" name="nav" value="1" id="slide1" checked>
     <label for="slide1"></label>
     <div class="slide" style="background-image:url(/assets/img/veronika_inspiration_students.jpg)"/>
@@ -59,4 +59,41 @@
     </div>
 </section>
 </body>
-</html
+<script>
+    $(window).scroll(function(){
+        $(".arrow").css("opacity", 1 - $(window).scrollTop() / 250);
+    });
+
+    $(".previous-btn").click(function() {
+        let btn = $(".previous-btn");
+        getPreviousForm(btn);
+    })
+
+    $("form").submit(function(e){
+        e.preventDefault();
+        getNextForm($(this).closest('form').children('input[type=hidden]'));
+    });
+
+    // function getPreviousForm(btn) {
+    //     let closestForm = $(btn).closest("form");
+    //     if (closestForm[0].previousElementSibling === closestForm[1].previousElementSibling) {
+    //         closestForm = closestForm[0];
+    //     }
+    //     console.log(closestForm);
+    //     closestForm.css("display", "none");
+    //     closestForm[0].previousElementSibling.css("display", "flex");
+    // }
+
+    function getNextForm(hiddenInputElement) {
+        let closestForm = $(hiddenInputElement).closest("form");
+        let nextForm = $(hiddenInputElement).closest("form").next();
+        let previousProgressElement = $("#" + hiddenInputElement.val())
+        if (nextForm.length != 0) {
+            previousProgressElement.css("background", "white");
+            closestForm.css("display", "none");
+            nextForm.css("display", "flex");
+            $("#" + nextForm.children('input[type=hidden]').val()).css("background", "#FDAE6C");
+        }
+    }
+</script>
+</html>

@@ -1,0 +1,98 @@
+@import 'feedback';
+
+#feedback-form-academic, #feedback-form-last {
+    display: none;
+}
+
+form {
+    background: $primary-lightblue-feedback;
+    color: $primary-purple-feedback;
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+    box-shadow: 9px 9px 22px -4px rgba($primary-purple-feedback,1);
+
+    width: 40vw;
+    margin: 0 auto;
+
+    h3, p {
+        text-align: center;
+    }
+
+    label {
+        margin-top: 1em;
+    }
+
+    input {
+        outline: none;
+        background: transparent;
+        border: 0;
+        padding: 0.5em;
+        margin: 0.5em;
+        border-bottom: 1px solid white;
+        color: $primary-purple-feedback;
+    }
+
+    input::placeholder {
+        color: $primary-purple-feedback;
+    }
+
+    input:focus {
+        border-bottom: 1px solid $primary-orange-feedback;
+    }
+
+    input[type="submit"] {
+        margin: 1em auto;
+        background: $primary-purple-feedback;
+        color: white;
+        border: none;
+        width: 20%;
+
+        &:hover {
+            color: $primary-orange-feedback;
+            cursor: pointer;
+        }
+    }
+
+    .radio-btns {
+        display: flex;
+        align-content: center;
+        justify-content: center;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        transform: translate3d(0,40px,0)
+    }
+
+    to {
+        transform: translate3d(0,0,0);
+        opacity: 1
+    }
+}
+
+@-webkit-keyframes fadeInUp {
+    from {
+        transform: translate3d(0,40px,0)
+    }
+
+    to {
+        transform: translate3d(0,0,0);
+        opacity: 1
+    }
+}
+
+.animated {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+.animatedFadeInUp {
+    opacity: 0
+}
+
+.fadeInUp {
+    opacity: 0;
+    animation-name: fadeInUp;
+}

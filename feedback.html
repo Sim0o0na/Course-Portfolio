@@ -1,0 +1,79 @@
+---
+layout: default
+title: Feedback
+---
+<section class="content">
+    <header class="index-header">
+        {% include navigation.html %}
+    </header>
+    <div class="feedback-call-to-action">
+        <h1>hey there!</h1>
+        <h2>think we're cool?</h2>
+        <h2>leave us your feedback, so we can be more awesome!</h2>
+    </div>
+    <div class="arrow bounce"><i class="fa fa-angle-down fa-5x" aria-hidden="true"></i></div>
+</section>
+<section>
+    <div class="values">
+        <article class="value">
+            <i class="fas fa-binoculars"></i>
+            <div class="value-description">
+                <h3>Always looking up to our students</h3>
+                <p>How they perform is most important to us. Our actions are based on what helps our students more.</p>
+        </article>
+        <article class="value">
+            <i class="fas fa-graduation-cap"></i>
+            <div class="value-description">
+                <h3>Our program is edited by past instances</h3>
+                <p>The course's program you see today is formed by the feedback given by past students!</p>
+            </div>
+        </article>
+        <article class="value">
+            <i class="fas fa-user-astronaut"></i>
+            <div class="value-description">
+                <h3>Team driven by constant contact</h3>
+                <p>Every member in the team is in close contact by the students via social media, learning platform and onsite lectures.</p>
+            </div>
+        </article>
+    </div>
+</section>
+<section class="feedback-panel-container">
+    <div class="feedback-form-container">
+        <div class="form-progress">
+            <div class="progress-axis"></div>
+            <div class="progress-element" id="progress-element-1"><i class="fas fa-user-tie"></i></div>
+            <div class="progress-element" id="progress-element-2"><i class="fas fa-user-graduate"></i></i></div>
+            <div class="progress-element" id="progress-element-3"><i class="fas fa-check"></i></div>
+        </div>
+        <form id="feedback-form-personal" class="animated animatedFadeInUp fadeInUp">
+            <h3>Personal Info</h3>
+            <p>Won't be used against you, we promise. This is step 1.</p>
+            <label for="softuni-username">Your SoftUni Username:</label>
+            <input type="text" name="softuni-username" placeholder="username">
+            <input type="hidden" name="template" value="progress-element-1">
+            <input type="submit" id="next-btn" value="Next">
+        </form>
+        <form id="feedback-form-academic" class="animated animatedFadeInUp fadeInUp">
+            <h3>Academic Info</h3>
+            <p>This will tootally be used against you. This is step 2.</p>
+            <label for="work-position">What is your work position?</label>
+            <input type="text" name="work-position" placeholder="Work Position">
+            <label for="education">Education or nay?</label>
+            <input type="text" name="education" placeholder="I've been studying...">
+            <input type="hidden" name="template" value="progress-element-2">
+            <input type="submit" id="next-btn" value="Next">
+        </form>
+        <form id="feedback-form-last" class="animated animatedFadeInUp fadeInUp">
+            <h3>Last Info</h3>
+            <p>Hold on, there's a little bit more. This is step 3.</p>
+            <label for="work-position">What is your work position?</label>
+            <input type="text" name="work-position" placeholder="Work Position">
+            <label for="education">Education or nay?</label>
+            <input type="text" name="education" placeholder="I've been studying...">
+            <input type="hidden" name="template" value="progress-element-3">
+           
+                <input type="submit" id="next-btn" value="Next">
+           
+        </form>
+    </div>
+</section>

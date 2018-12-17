@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feedback</title>
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+    <section class="content">
+    <header class="index-header">
+        <nav>
+    <a href="softuni.bg/apply">Start now!</a>
+    <ul>
+        <li>Team<i class="fas fa-angle-down"></i></li>
+        <li>Instances</li>
+        <li><span><a href="/feedback.html">Leave your feedback!</a></span></li>
+    </ul>
+</nav>
+    </header>
+    <div class="feedback-call-to-action">
+        <h1>hey there!</h1>
+        <h2>think we're cool?</h2>
+        <h2>leave us your feedback, so we can be more awesome!</h2>
+    </div>
+    <div class="arrow bounce"><i class="fa fa-angle-down fa-5x" aria-hidden="true"></i></div>
+</section>
+<section>
+    <div class="values">
+        <article class="value">
+            <i class="fas fa-binoculars"></i>
+            <div class="value-description">
+                <h3>Always looking up to our students</h3>
+                <p>How they perform is most important to us. Our actions are based on what helps our students more.</p>
+        </article>
+        <article class="value">
+            <i class="fas fa-graduation-cap"></i>
+            <div class="value-description">
+                <h3>Our program is edited by past instances</h3>
+                <p>The course's program you see today is formed by the feedback given by past students!</p>
+            </div>
+        </article>
+        <article class="value">
+            <i class="fas fa-user-astronaut"></i>
+            <div class="value-description">
+                <h3>Team driven by constant contact</h3>
+                <p>Every member in the team is in close contact by the students via social media, learning platform and onsite lectures.</p>
+            </div>
+        </article>
+    </div>
+</section>
+<section class="feedback-panel-container">
+    <div class="feedback-form-container">
+        <div class="form-progress">
+            <div class="progress-axis"></div>
+            <div class="progress-element" id="progress-element-1"><i class="fas fa-user-tie"></i></div>
+            <div class="progress-element" id="progress-element-2"><i class="fas fa-user-graduate"></i></i></div>
+            <div class="progress-element" id="progress-element-3"><i class="fas fa-check"></i></div>
+        </div>
+        <form id="feedback-form-personal" class="animated animatedFadeInUp fadeInUp">
+            <h3>Personal Info</h3>
+            <p>Won't be used against you, we promise. This is step 1.</p>
+            <label for="softuni-username">Your SoftUni Username:</label>
+            <input type="text" name="softuni-username" placeholder="username">
+            <input type="hidden" name="template" value="progress-element-1">
+            <input type="submit" id="next-btn" value="Next">
+        </form>
+        <form id="feedback-form-academic" class="animated animatedFadeInUp fadeInUp">
+            <h3>Academic Info</h3>
+            <p>This will tootally be used against you. This is step 2.</p>
+            <label for="work-position">What is your work position?</label>
+            <input type="text" name="work-position" placeholder="Work Position">
+            <label for="education">Education or nay?</label>
+            <input type="text" name="education" placeholder="I've been studying...">
+            <input type="hidden" name="template" value="progress-element-2">
+            <input type="submit" id="next-btn" value="Next">
+        </form>
+        <form id="feedback-form-last" class="animated animatedFadeInUp fadeInUp">
+            <h3>Last Info</h3>
+            <p>Hold on, there's a little bit more. This is step 3.</p>
+            <label for="work-position">What is your work position?</label>
+            <input type="text" name="work-position" placeholder="Work Position">
+            <label for="education">Education or nay?</label>
+            <input type="text" name="education" placeholder="I've been studying...">
+            <input type="hidden" name="template" value="progress-element-3">
+           
+                <input type="submit" id="next-btn" value="Next">
+           
+        </form>
+    </div>
+</section>
+
+</body>
+<script>
+    $(window).scroll(function(){
+        $(".arrow").css("opacity", 1 - $(window).scrollTop() / 250);
+    });
+
+    $(".previous-btn").click(function() {
+        let btn = $(".previous-btn");
+        getPreviousForm(btn);
+    })
+
+    $("form").submit(function(e){
+        e.preventDefault();
+        getNextForm($(this).closest('form').children('input[type=hidden]'));
+    });
+
+    // function getPreviousForm(btn) {
+    //     let closestForm = $(btn).closest("form");
+    //     if (closestForm[0].previousElementSibling === closestForm[1].previousElementSibling) {
+    //         closestForm = closestForm[0];
+    //     }
+    //     console.log(closestForm);
+    //     closestForm.css("display", "none");
+    //     closestForm[0].previousElementSibling.css("display", "flex");
+    // }
+
+    function getNextForm(hiddenInputElement) {
+        let closestForm = $(hiddenInputElement).closest("form");
+        let nextForm = $(hiddenInputElement).closest("form").next();
+        let previousProgressElement = $("#" + hiddenInputElement.val())
+        if (nextForm.length != 0) {
+            previousProgressElement.css("background", "white");
+            closestForm.css("display", "none");
+            nextForm.css("display", "flex");
+            $("#" + nextForm.children('input[type=hidden]').val()).css("background", "#FDAE6C");
+        }
+    }
+</script>
+</html>
