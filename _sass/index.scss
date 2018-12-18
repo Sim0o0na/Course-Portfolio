@@ -109,6 +109,11 @@ footer {
             background: $primary-orange-feedback;
         }
     }
+
+    #footer-mailing-list {
+        padding-right: 3em;
+        border-right: 1px solid lightgray;
+    }
 }
 
 .image-description {

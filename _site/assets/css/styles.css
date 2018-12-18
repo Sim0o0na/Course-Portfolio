@@ -103,6 +103,7 @@ footer #follow-us ul > li:hover { color: #FDAE6C; }
 footer input { outline: none; border: none; margin-top: 0.5em; padding: 0.5em; }
 footer input[type="submit"] { background: white; color: #3A599C; }
 footer input[type="submit"]:hover { background: #FDAE6C; }
+footer #footer-mailing-list { padding-right: 3em; border-right: 1px solid lightgray; }
 
 .image-description { color: white; width: 40em; position: absolute; bottom: 5em; left: 10%; }
 .image-description .image-group-technology { border: 3px solid white; display: inline-block; padding: 0.5em; text-transform: uppercase; }
@@ -157,3 +158,5 @@ form input[type="submit"]:hover { color: #FDAE6C; cursor: pointer; }
 .animatedFadeInUp { opacity: 0; }
 
 .fadeInUp { opacity: 0; animation-name: fadeInUp; }
+
+@keyframes pop { 50% { transform: scale(1.2); } }

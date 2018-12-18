@@ -37,3 +37,8 @@
     opacity: 0;
     animation-name: fadeInUp;
 }
+
+@keyframes pop{
+    50%  {transform: scale(1.2);}
+}
+  
