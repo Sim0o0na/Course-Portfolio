@@ -1,24 +1,26 @@
 $primary-purple-feedback: #3A599C;
+$primary-purple-darker-feedback: rgb(39, 65, 121);
 $primary-lightblue-feedback: #B1F2FF;
 $primary-orange-feedback: #FDAE6C;
 
-section {
-    width: 100vw;
-}
-
 .content {
     height: 100vh;
-    width: 100vw;
     background-image: url("/assets/img/students.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    position: relative;
+}
+
+.content:before {
+    display: block;
+    content: '';
+    height: 60%;
 }
 
 .feedback-call-to-action {
-    position: absolute;
-    top: 50%;
+    width: 50%;
+    min-width: 60%;
+    max-height: 10em;
     text-transform: uppercase;
     background-color: rgba(black, 0.4);
     color: white;
@@ -26,76 +28,36 @@ section {
     h1, h2 {
         margin-left: 10%;
         padding: 0;
-    } 
+    }
 }
-
-@-moz-keyframes bounce {
-    0%, 20%, 50%, 80%, 100% {
-      transform: translateY(0);
-    }
-    40% {
-      transform: translateY(-30px);
-    }
-    60% {
-      transform: translateY(-15px);
-    }
-  }
-
-  @-webkit-keyframes bounce {
-    0%, 20%, 50%, 80%, 100% {
-      transform: translateY(0);
-    }
-    40% {
-      transform: translateY(-30px);
-    }
-    60% {
-      transform: translateY(-15px);
-    }
-  }
-
-  @keyframes bounce {
-    0%, 20%, 50%, 80%, 100% {
-      transform: translateY(0);
-    }
-    40% {
-      transform: translateY(-30px);
-    }
-    60% {
-      transform: translateY(-15px);
-    }
-  }
   
-  .arrow {
+.arrow {
     position: absolute;
-    color: rgba(black, 0.4);
+    color: rgb(124, 108, 108);
     bottom: 2%;
     left: 50%;
-  }
-  
-  .bounce {
+}
+
+.bounce {
     animation: bounce 2s infinite;
-  }
+}
 
   .values {
       background: $primary-purple-feedback;
-      padding: 0.5em;
+      padding: 1em;
       display: flex;
-      flex-wrap: wrap;
-      justify-content: space-around;
-      height: 40vh;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
     
       .value {
-          display: flex;
-          align-items: center;
-          min-width: 5%;
           max-width: 30%;
-          margin-left: 0.5em;
-          margin-right: 0.5em;
+          text-align: center;
+          margin: 1em;
       }
 
     article {
         color: white;
-        margin: 1em;
 
         i {
             font-size: 10em;
@@ -109,7 +71,8 @@ section {
 }
 
 .feedback-panel-container {
-    background-image: linear-gradient($primary-purple-feedback, $primary-orange-feedback);
+    // background-image: linear-gradient($primary-purple-feedback, $primary-orange-feedback);
+    background: $primary-orange-feedback;
     height: 80vh;
 
     .form-progress {
@@ -118,23 +81,24 @@ section {
         width: 30%;
         margin: 0 auto;
         display: flex;
-        justify-content: center;
         align-items: center;
         position: relative;
 
         .progress-axis {
-            height: 3%;
-            width: 50%;
+            height: 5%;
+            width: 80%;
             background: $primary-lightblue-feedback;
             margin: 0 auto;
         }
 
         .progress-element {
             background: white;
-            width: 30px;
-            height: 30px;
+            width: 9%;
+            height: 27%;
+            min-width: 30px;
+            min-height: 30px;
             position: absolute;
-            top: calc(80vh * 20%);
+            top: 37%;
             left: 10%;
             text-align: center;
             color: $primary-purple-feedback;
@@ -145,18 +109,16 @@ section {
         }
 
         #progress-element-1 {
-            background: $primary-orange-feedback;
-            color: $primary-purple-feedback;
-            left: calc(80vh * 0.17);
+            background: $primary-purple-feedback;
+            color: white;
         }
 
         #progress-element-2 {
-            // 46
-            left: calc(80vh * 0.35);
+            left: 46%;
         }
 
         #progress-element-3 {
-            left: calc(80vh * 0.55);
+            left: 84%;
         }
     }
 }

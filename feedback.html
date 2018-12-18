@@ -2,10 +2,10 @@
 layout: default
 title: Feedback
 ---
+<header class="index-header">
+    {% include navigation.html %}
+</header>
 <section class="content">
-    <header class="index-header">
-        {% include navigation.html %}
-    </header>
     <div class="feedback-call-to-action">
         <h1>hey there!</h1>
         <h2>think we're cool?</h2>
@@ -13,8 +13,7 @@ title: Feedback
     </div>
     <div class="arrow bounce"><i class="fa fa-angle-down fa-5x" aria-hidden="true"></i></div>
 </section>
-<section>
-    <div class="values">
+<section class="values">
         <article class="value">
             <i class="fas fa-binoculars"></i>
             <div class="value-description">
@@ -35,8 +34,7 @@ title: Feedback
                 <p>Every member in the team is in close contact by the students via social media, learning platform and onsite lectures.</p>
             </div>
         </article>
-    </div>
-</section>
+    </section>
 <section class="feedback-panel-container">
     <div class="feedback-form-container">
         <div class="form-progress">
@@ -65,15 +63,14 @@ title: Feedback
         </form>
         <form id="feedback-form-last" class="animated animatedFadeInUp fadeInUp">
             <h3>Last Info</h3>
-            <p>Hold on, there's a little bit more. This is step 3.</p>
+            <p>Hold on, there's a little bit more. This is st   ep 3.</p>
             <label for="work-position">What is your work position?</label>
             <input type="text" name="work-position" placeholder="Work Position">
             <label for="education">Education or nay?</label>
             <input type="text" name="education" placeholder="I've been studying...">
             <input type="hidden" name="template" value="progress-element-3">
-           
-                <input type="submit" id="next-btn" value="Next">
-           
+            <input type="submit" id="next-btn" value="Next">
         </form>
     </div>
 </section>
+{% include footer.html %}
