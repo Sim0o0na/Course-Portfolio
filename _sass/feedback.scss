@@ -1,7 +1,4 @@
-$primary-purple-feedback: #3A599C;
-$primary-purple-darker-feedback: rgb(39, 65, 121);
-$primary-lightblue-feedback: #B1F2FF;
-$primary-orange-feedback: #FDAE6C;
+@import '_variables';
 
 .content {
     height: 100vh;

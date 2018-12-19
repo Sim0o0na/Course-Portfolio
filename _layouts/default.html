@@ -45,9 +45,14 @@
             closestForm.css("display", "none");
             nextForm.css("display", "flex");
             $("#" + nextForm.children('input[type=hidden]').val()).css("background", "#3A599C");
-            $("#" + nextForm.children('input[type=hidden]').val()).css("animation", "pop 0.3s linear 1");
+            $("#" + nextForm.children('input[type=hidden]').val()).css("animation", "pop 0.5s ease-in-out 1");
             $("#" + nextForm.children('input[type=hidden]').val()).css("color", "white");
         }
     }
+
+    // $(function() {
+    //     let navHeight = $("nav").height();
+    //     $("#team-gallery").css("padding-top", navHeight);
+    // });
 </script>
 </html>

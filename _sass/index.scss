@@ -2,15 +2,18 @@ html, body {
     height: 100%;
 }
 
-nav {
+header {
     width: 100%;
     position: fixed;
+    z-index: 5;
+}
+
+nav {
     background: linear-gradient(to left, rgba($primary-purple-feedback,0.8), rgba($primary-orange-feedback, 0.8));
     padding: 0.5rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    z-index: 5;
 
     &.solid-nav {
         background-color: black;

@@ -1,0 +1,101 @@
+@import '_variables';
+
+#team-gallery {
+    background: $primary-purple-feedback;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(2, 45vh);
+    grid-gap: 0.1em 0.1em;
+
+
+    div {
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center; 
+    }
+
+    .team-gallery-first {
+        background-image:url("/assets/img/code_ground_students.jpg");
+        grid-column-start: 1;
+        grid-column-end: 4;
+    }
+
+    .team-gallery-second {
+        background-image:url("/assets/img/team_friday.jpg");
+        grid-column-start: 4;
+        grid-column-end: end;
+    }
+
+    .team-gallery-third {
+        background-image:url("/assets/img/martin_paunov_lecturer.jpg");
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+
+    .team-gallery-fourth {
+        background-image:url("/assets/img/students.jpg");
+        grid-column-start: 3;
+        grid-column-end: 5;
+    }
+
+    .team-gallery-fifth {
+        background-image:url("/assets/img/students-behind.jpg");
+        grid-column-start: 5;
+        grid-column-end: end;
+    }
+}
+
+.team {
+    background: $primary-purple-feedback;
+    width: 100%;
+    text-align: center;
+    color: white;
+
+    .team-members-info {
+        display: flex;
+        justify-content: space-around;
+
+        article {
+            background: white;
+            height: 50vh;
+            width: 20%;
+            padding: 1em;
+            margin: 1em;
+            box-sizing: content-box;
+
+            .member-img {
+                display: flex;
+                width: 80%;
+                height: 55%;
+                min-width: 80px;
+                min-height: 80px;
+                background-image: url("/assets/img/team/martin.jpg");
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                display: flex;
+                justify-content: flex-end;
+
+                &:hover {
+                    .member-socials {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-around;
+                    }
+                }
+
+                .member-socials {
+                    display: none;
+                    width: 20%;
+                    height: 100%;
+                    background: $primary-purple-feedback;
+                    animation: slide-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+                    
+                    i:hover {
+                        color: $primary-orange-feedback;
+                    }
+                }
+            }
+        }
+    }
+}
