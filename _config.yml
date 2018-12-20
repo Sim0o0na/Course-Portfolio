@@ -1,10 +1,6 @@
 title: Programming Basics
 description: Get started for free now!
-<<<<<<< HEAD
 baseUrl: '/Course-Portfolio'
-=======
-baseUrl: 'Course-Portfolio'
->>>>>>> parent of f57b864... removed baseUrl _config.yml
 
 sass:
   style: compact
