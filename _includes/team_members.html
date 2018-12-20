@@ -1,6 +1,7 @@
 {% for member in site.team_members %}
     <article>
-        <div class="member-img" style="background-image: url({{ member.avatar }})">
+        {% assign avatarUrl = {{ site.baseUrl }} | append: '/' | append: {{ member.avatar }} %}
+        <div class="member-img" style="background-image: url({{ avatarUrl }})">
             <div class="member-socials">
                 <i class="fab fa-facebook"></i>
                 <i class="fab fa-facebook"></i>
