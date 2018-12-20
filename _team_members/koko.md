@@ -1,5 +1,5 @@
 ---
 name: Konstantin Mitev
 position: Mentor
-avatar: /img/team/koko.jpg
+avatar: /Course-Portfolio/img/team/koko.jpg
 ---

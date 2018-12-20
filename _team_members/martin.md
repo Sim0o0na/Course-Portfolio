@@ -1,5 +1,5 @@
 ---
 name: Martin Georgiev
 position: Lecturer
-avatar: /img/team/martin.jpg
+avatar: /Course-Portfolio/img/team/martin.jpg
 ---
