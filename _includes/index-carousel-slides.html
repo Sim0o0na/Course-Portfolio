@@ -4,8 +4,9 @@
     {% else %}
         <input type="radio" name="nav" value="{{ forloop.index }}" id="slide{{ forloop.index }}">
     {% endif %}
+    {% assign imageUrl = site.baseUrl | append: '/' | append: home_page_item.background-url %}
     <label for="slide{{ forloop.index }}"></label>
-    <div class="slide" style="background-image:url({{ home_page_item.background-url }}"/>
+    <div class="slide" style="background-image:url({{ imageUrl }}"/>
         <div class="image-description">
             <p class="image-group-technology">{{ home_page_item.tag }}</p>
             <h1 class="image-heading">{{ home_page_item.heading }}</h1>
