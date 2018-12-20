@@ -1,6 +1,6 @@
 @import url("/assets/fontawesome/css/all.css");
 /*  Whitespace Reset */
-@import url("https://fonts.googleapis.com/css?family=Raleway|Roboto:400i");
+@import url("https://fonts.googleapis.com/css?family=Raleway|Roboto:400");
 * { padding: 0; margin: 0; }
 
 /*  Box-sizing fix */
@@ -168,8 +168,11 @@ footer #footer-mailing-list { padding-right: 3em; border-right: 1px solid lightg
 
 :root { --font-size-initial: 12px; --font-size-lv2: 14px; --font-size-lv3: 16px; --font-size-lv4: 18px; --spacing-site: 2rem; --color-text-main: #000; }
 
-#team-gallery { background: #3A599C; display: grid; grid-template-columns: repeat(6, 1fr); grid-template-rows: repeat(2, 45vh); grid-gap: 0.1em 0.1em; }
-#team-gallery div { background-size: cover; background-repeat: no-repeat; background-position: center center; }
+#team-gallery { display: grid; grid-template-columns: repeat(6, 1fr); grid-template-rows: repeat(2, 45vh); grid-gap: 0.1em 0.1em; transition: .5s ease; backface-visibility: hidden; }
+#team-gallery div { position: relative; opacity: 1; background-size: cover; background-repeat: no-repeat; background-position: center center; }
+#team-gallery div:hover { opacity: 0.4; }
+#team-gallery div:hover .overlay { opacity: 1; }
+#team-gallery .overlay { transition: .5s ease; opacity: 0; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; color: #FDAE6C; }
 #team-gallery .team-gallery-first { background-image: url("/assets/img/code_ground_students.jpg"); grid-column-start: 1; grid-column-end: 4; }
 #team-gallery .team-gallery-second { background-image: url("/assets/img/team_friday.jpg"); grid-column-start: 4; grid-column-end: end; }
 #team-gallery .team-gallery-third { background-image: url("/assets/img/martin_paunov_lecturer.jpg"); grid-column-start: 1; grid-column-end: 3; }
@@ -177,9 +180,10 @@ footer #footer-mailing-list { padding-right: 3em; border-right: 1px solid lightg
 #team-gallery .team-gallery-fifth { background-image: url("/assets/img/students-behind.jpg"); grid-column-start: 5; grid-column-end: end; }
 
 .team { background: #3A599C; width: 100%; text-align: center; color: white; }
-.team .team-members-info { display: flex; justify-content: space-around; }
-.team .team-members-info article { background: white; height: 50vh; width: 20%; padding: 1em; margin: 1em; box-sizing: content-box; }
-.team .team-members-info article .member-img { display: flex; width: 80%; height: 55%; min-width: 80px; min-height: 80px; background-image: url("/assets/img/team/martin.jpg"); background-position: center; background-repeat: no-repeat; background-size: cover; display: flex; justify-content: flex-end; }
+.team .team-members-info { display: flex; justify-content: space-around; color: #3A599C; }
+.team .team-members-info article { background: white; height: 50vh; width: 20%; padding: 1em; margin: 1em; display: flex; flex-direction: column; justify-content: center; }
+.team .team-members-info article h3 { color: #FDAE6C; }
+.team .team-members-info article .member-img { margin: 0 auto; width: 80%; height: 55%; min-width: 80px; min-height: 80px; background-image: url("/assets/img/team/martin.jpg"); background-position: center; background-repeat: no-repeat; background-size: cover; display: flex; justify-content: flex-end; }
 .team .team-members-info article .member-img:hover .member-socials { display: flex; flex-direction: column; justify-content: space-around; }
-.team .team-members-info article .member-img .member-socials { display: none; width: 20%; height: 100%; background: #3A599C; animation: slide-left 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both; }
+.team .team-members-info article .member-img .member-socials { display: none; width: 20%; height: 100%; background: #3A599C; animation: slide-left 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both; color: white; }
 .team .team-members-info article .member-img .member-socials i:hover { color: #FDAE6C; }
