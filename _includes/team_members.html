@@ -1,0 +1,14 @@
+{% for member in site.team_members %}
+    <article>
+        <div class="member-img" style="background-image: url({{ member.avatar }})">
+            <div class="member-socials">
+                <i class="fab fa-facebook"></i>
+                <i class="fab fa-facebook"></i>
+                <i class="fab fa-facebook"></i>
+            </div>
+        </div>
+        <h3>{{ member.name }}</h3>
+        <h4>{{ member.position }}</h4>
+        <!-- <p>{{ member.description }}</p> -->
+    </article>
+{% endfor%}

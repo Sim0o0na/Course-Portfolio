@@ -3,8 +3,8 @@ layout: default
 title: Team
 ---
 {% include navigation.html %}
+{% include sticky-social-media.html %}
 <section class="gallery" id="team-gallery">
-    <div class="overlay"></div>
     <div class="team-gallery-first"></div>
     <div class="team-gallery-second"></div>
     <div class="team-gallery-third"></div>
@@ -14,42 +14,7 @@ title: Team
 <section class="team">
     <h1>Our Team</h1>
     <div class="team-members-info">
-        <article>
-            <div class="member-img">
-                <div class="member-socials"></div>
-            </div>
-            <h3>Team Member</h3>
-            <h4>Lecturer</h4>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate atque iste aliquam!</p>
-        </article>
-        <article>
-            <div class="member-img">
-                <div class="member-socials"></div>
-            </div>
-            <h3>Team Member</h3>
-            <h4>Lecturer</h4>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate atque iste aliquam! Cupiditate atque iste aliquam!</p>
-        </article>
-        <article>
-            <div class="member-img">
-                <div class="member-socials">
-                    <i class="fab fa-facebook"></i>
-                    <i class="fab fa-facebook"></i>
-                    <i class="fab fa-facebook"></i>
-                </div>
-            </div>
-            <h3>Team Member</h3>
-            <h4>Lecturer</h4>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate atque iste aliquam! Cupiditate atque!</p>
-        </article>
-        <article>
-            <div class="member-img">
-                <div class="member-socials"></div>
-            </div>
-            <h3>Team Member</h3>
-            <h4>Lecturer</h4>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate atque iste aliquam!</p>
-        </article>
+        {% include team_members.html %}
     </div>  
 </section>
 {% include footer.html %}

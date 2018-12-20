@@ -16,8 +16,10 @@
 
 .feedback-call-to-action {
     width: 50%;
+    padding: 0.3em;
+    font-size: 0.8em;
     min-width: 60%;
-    max-height: 10em;
+    max-height: 15em;
     text-transform: uppercase;
     background-color: rgba(black, 0.4);
     color: white;
@@ -25,6 +27,18 @@
     h1, h2 {
         margin-left: 10%;
         padding: 0;
+    }
+
+    @media screen and (max-width: 1000px) {
+        font-size: 0.5em;
+    }
+
+    @media screen and (max-width: 650px) {
+        font-size: 0.5em;
+    }
+
+    @media screen and (max-width: 290px) {
+        font-size: 0.3em;
     }
 }
   
@@ -40,18 +54,22 @@
 }
 
   .values {
-      background: $primary-purple-feedback;
-      padding: 1em;
-      display: flex;
-    flex-wrap: wrap;
+    background: $primary-purple-feedback;
+    padding: 1em;
+    display: flex;
     align-items: center;
     justify-content: space-around;
-    
-      .value {
-          max-width: 30%;
-          text-align: center;
-          margin: 1em;
-      }
+
+    .value {
+        width: 30%;
+        text-align: center;
+        margin: 1em;
+    }
+
+    @media screen and (max-width: 650px) {
+        flex-direction: column;
+        .value { width: 80%; }
+    }
 
     article {
         color: white;
@@ -86,6 +104,10 @@
             width: 80%;
             background: $primary-lightblue-feedback;
             margin: 0 auto;
+
+            @media screen and (max-width: 650px) {
+                width: 100%;
+            }
         }
 
         .progress-element {
@@ -96,7 +118,6 @@
             min-height: 30px;
             position: absolute;
             top: 37%;
-            left: 10%;
             text-align: center;
             color: $primary-purple-feedback;
             display: flex;
@@ -106,6 +127,7 @@
         }
 
         #progress-element-1 {
+            left: 10%;
             background: $primary-purple-feedback;
             color: white;
         }
@@ -116,6 +138,20 @@
 
         #progress-element-3 {
             left: 84%;
+        }
+
+        @media screen and (max-width: 650px) {
+            #progress-element-1 {
+                left: 0%;
+            }
+    
+            #progress-element-2 {
+                left: 40%;
+            }
+    
+            #progress-element-3 {
+                left: 85%;
+            }
         }
     }
 }

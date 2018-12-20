@@ -5,12 +5,12 @@ html {
     font-family: 'Raleway', sans-serif;
 }
 
-@media screen and (min-width: 500px) {
-	html { font-size: var(--font-size-lv2, 14px); }
+@media screen and (min-width: 450px) {
+	html { font-size: var(--font-size-lv2, 10px); }
 }
 
 @media screen and (min-width: 700px) {
-	html { font-size: var(--font-size-lv3, 16px); }
+	html { font-size: var(--font-size-lv3, 10px); }
 }
 
 @media screen and (min-width: 1600px) {

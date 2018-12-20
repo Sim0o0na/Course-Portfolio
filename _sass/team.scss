@@ -3,7 +3,7 @@
 #team-gallery {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: repeat(2, 45vh);
+    grid-template-rows: repeat(2, 47vh);
     grid-gap: 0.1em 0.1em;
     transition: .5s ease;
     backface-visibility: hidden;
@@ -14,25 +14,6 @@
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center center;
-        
-        &:hover {
-            opacity: 0.4;
-
-            .overlay {
-                opacity: 1;
-            }
-        }
-    }
-
-    .overlay {
-        transition: .5s ease;
-        opacity: 0;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        text-align: center;
-        color: $primary-orange-feedback;
     }
 
     .team-gallery-first {
@@ -67,11 +48,14 @@
 }
 
 .team {
-    // background-image: linear-gradient($primary-purple-feedback, $primary-orange-feedback);
     background: $primary-purple-feedback;
     width: 100%;
     text-align: center;
     color: white;
+
+    h1 {
+        background: $primary-purple-darker-feedback;
+    }
 
     .team-members-info {
         display: flex;
@@ -81,8 +65,9 @@
         article {
             background: white;
             height: 50vh;
+            min-width: 120px;
+            min-height: 12s0px;
             width: 20%;
-            padding: 1em;
             margin: 1em;
             display: flex;
             flex-direction: column;
@@ -94,11 +79,10 @@
 
             .member-img {
                 margin: 0 auto;
-                width: 80%;
-                height: 55%;
-                min-width: 80px;
-                min-height: 80px;
-                background-image: url("/img/team/martin.jpg");
+                width: 90%;
+                height: 60%;
+                min-width: 100px;
+                min-height: 100px;
                 background-position: center;
                 background-repeat: no-repeat;
                 background-size: cover;
@@ -125,6 +109,30 @@
                         color: $primary-orange-feedback;
                     }
                 }
+            }
+        }
+    }
+
+    @media screen and (max-width: 500px) {
+        .team-members-info {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            article {
+                width: 70%;
+            }
+        }
+    }
+
+    @media screen and (max-width: 890px) {
+        .team-members-info {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+
+            article {
+                width: 50%;
             }
         }
     }

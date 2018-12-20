@@ -1,3 +1,5 @@
+@import '_variables';
+
 .carousel {
     position: relative;
 	width: 100vw;
@@ -21,7 +23,7 @@
 }
 .carousel input + label {
     position: absolute;
-	display: block;
+	display: flex;
     z-index: 3;
     bottom: 0;
     left: 38%;
@@ -32,7 +34,7 @@
 	position: absolute;
 	content: "";
 	padding: 0.5em;
-	box-shadow: 3px -3px 0 0.5px white inset;
+	box-shadow: 3px -3px 0 0.5px $primary-orange-feedback inset;
 	border: solid transparent;
 	transform: rotate(45deg);
 }
@@ -52,4 +54,14 @@
 	z-index: 2;
 	transition: opacity 1s;
 	opacity: 1;
+}
+
+@media screen and (max-width: 1500px) { 
+	.carousel input + label {
+		left: 65%;
+	}
+
+	.carousel input:checked ~ input + label {
+		margin-left: 0%;
+	}
 }

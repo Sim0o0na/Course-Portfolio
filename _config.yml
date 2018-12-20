@@ -11,3 +11,7 @@ exclude:
 - Gemfile.lock
 - .gitignore
 - scss
+
+collections:
+  - home_page_items
+  - team_members
