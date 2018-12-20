@@ -9,7 +9,8 @@ header {
 }
 
 nav {
-    background: linear-gradient(to left, rgba($primary-purple-feedback,0.8), rgba($primary-orange-feedback, 0.8));
+    background: linear-gradient(to left, rgba($primary-purple-feedback,0.8), 
+                                        rgba($primary-orange-feedback, 0.8));
     padding: 0.5rem;
     display: flex;
     align-items: center;
@@ -32,6 +33,7 @@ nav {
 
     ul {
         display: flex;
+        align-items: center;
 
         li {
             list-style: none;

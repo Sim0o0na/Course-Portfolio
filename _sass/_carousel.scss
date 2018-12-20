@@ -65,3 +65,23 @@
 		margin-left: 0%;
 	}
 }
+
+@media screen and (max-width: 500px) { 
+	.carousel input + label {
+		left: 65%;
+	}
+
+	.carousel input:checked ~ input + label {
+		margin-left: 10%;
+	}
+}
+
+@media screen and (max-width: 440px) { 
+	.carousel input + label {
+		left: 63%;
+	}
+
+	.carousel input:checked ~ input + label {
+		margin-left: 30%;
+	}
+}

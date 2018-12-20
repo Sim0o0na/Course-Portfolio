@@ -59,6 +59,10 @@ p, textarea { font-family: 'Roboto', sans-serif; }
 
 @media screen and (max-width: 1500px) { .carousel input + label { left: 65%; }
   .carousel input:checked ~ input + label { margin-left: 0%; } }
+@media screen and (max-width: 500px) { .carousel input + label { left: 65%; }
+  .carousel input:checked ~ input + label { margin-left: 10%; } }
+@media screen and (max-width: 440px) { .carousel input + label { left: 63%; }
+  .carousel input:checked ~ input + label { margin-left: 30%; } }
 :root { --font-size-initial: 12px; --font-size-lv2: 14px; --font-size-lv3: 16px; --font-size-lv4: 18px; --spacing-site: 2rem; --color-text-main: #000; }
 
 .content { height: 100vh; background-image: url("../img/students.jpg"); background-position: center; background-repeat: no-repeat; background-size: cover; }
@@ -165,7 +169,7 @@ nav { background: linear-gradient(to left, rgba(58, 89, 156, 0.8), rgba(253, 174
 nav.solid-nav { background-color: black; transition: background-color 0.2s linear; }
 nav ul, nav a { margin: 1rem; z-index: 5; }
 nav a { text-decoration: none; color: white; }
-nav ul { display: flex; }
+nav ul { display: flex; align-items: center; }
 nav ul li { list-style: none; margin-left: 1rem; color: white; }
 nav ul li:hover, nav ul li span { color: orange; }
 nav ul li i { margin-left: 5px; }
