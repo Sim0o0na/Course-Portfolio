@@ -4,9 +4,10 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Team</title>
-  <link rel="stylesheet" href="assets/css/styles.css" />
-  <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/css/styles.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="/js/feedback-form.js"></script>
 </head>
 <body>
     <nav>
@@ -118,34 +119,24 @@
         }
     });
 
-    $(".previous-btn").click(function() {
-        let btn = $(".previous-btn");
-        getPreviousForm(btn);
-    })
-
     $("form").submit(function(e){
-        e.preventDefault();
-        getNextForm($(this).closest('form').children('input[type=hidden]'));
-    });
+    e.preventDefault();
+    getNextForm($(this).closest('form').children('input[type=hidden]'));
+});
 
-    function getNextForm(hiddenInputElement) {
-        let closestForm = $(hiddenInputElement).closest("form");
-        let nextForm = $(hiddenInputElement).closest("form").next();
-        let previousProgressElement = $("#" + hiddenInputElement.val())
-        if (nextForm.length != 0) {
-            previousProgressElement.css("background", "white");
-            previousProgressElement.css("color", "#3A599C");
-            closestForm.css("display", "none");
-            nextForm.css("display", "flex");
-            $("#" + nextForm.children('input[type=hidden]').val()).css("background", "#3A599C");
-            $("#" + nextForm.children('input[type=hidden]').val()).css("animation", "pop 0.5s ease-in-out 1");
-            $("#" + nextForm.children('input[type=hidden]').val()).css("color", "white");
-        }
+function getNextForm(hiddenInputElement) {
+    let closestForm = $(hiddenInputElement).closest("form");
+    let nextForm = $(hiddenInputElement).closest("form").next();
+    let previousProgressElement = $("#" + hiddenInputElement.val())
+    if (nextForm.length != 0) {
+        previousProgressElement.css("background", "white");
+        previousProgressElement.css("color", "#3A599C");
+        closestForm.css("display", "none");
+        nextForm.css("display", "flex");
+        $("#" + nextForm.children('input[type=hidden]').val()).css("background", "#3A599C");
+        $("#" + nextForm.children('input[type=hidden]').val()).css("animation", "pop 0.5s ease-in-out 1");
+        $("#" + nextForm.children('input[type=hidden]').val()).css("color", "white");
     }
-
-    // $(function() {
-    //     let navHeight = $("nav").height();
-    //     $("#team-gallery").css("padding-top", navHeight);
-    // });
+}
 </script>
 </html>
