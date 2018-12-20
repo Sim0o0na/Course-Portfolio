@@ -205,11 +205,11 @@ footer #footer-mailing-list { padding-right: 3em; border-right: 1px solid lightg
 
 #team-gallery { display: grid; grid-template-columns: repeat(6, 1fr); grid-template-rows: repeat(2, 47vh); grid-gap: 0.1em 0.1em; transition: .5s ease; backface-visibility: hidden; }
 #team-gallery div { position: relative; opacity: 1; background-size: cover; background-repeat: no-repeat; background-position: center center; }
-#team-gallery .team-gallery-first { background-image: url("../img/code_ground_students.jpg"); grid-column-start: 1; grid-column-end: 4; }
-#team-gallery .team-gallery-second { background-image: url("../img/team_friday.jpg"); grid-column-start: 4; grid-column-end: end; }
-#team-gallery .team-gallery-third { background-image: url("../img/martin_paunov_lecturer.jpg"); grid-column-start: 1; grid-column-end: 3; }
-#team-gallery .team-gallery-fourth { background-image: url("../img/students.jpg"); grid-column-start: 3; grid-column-end: 5; }
-#team-gallery .team-gallery-fifth { background-image: url("../img/students-behind.jpg"); grid-column-start: 5; grid-column-end: end; }
+#team-gallery .team-gallery-first { background-image: url("/img/code_ground_students.jpg"); grid-column-start: 1; grid-column-end: 4; }
+#team-gallery .team-gallery-second { background-image: url("/img/team_friday.jpg"); grid-column-start: 4; grid-column-end: end; }
+#team-gallery .team-gallery-third { background-image: url("/img/martin_paunov_lecturer.jpg"); grid-column-start: 1; grid-column-end: 3; }
+#team-gallery .team-gallery-fourth { background-image: url("/img/students.jpg"); grid-column-start: 3; grid-column-end: 5; }
+#team-gallery .team-gallery-fifth { background-image: url("/img/students-behind.jpg"); grid-column-start: 5; grid-column-end: end; }
 
 .team { background: #3A599C; width: 100%; text-align: center; color: white; }
 .team h1 { background: #274179; }

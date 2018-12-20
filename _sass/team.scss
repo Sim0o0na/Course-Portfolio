@@ -17,31 +17,31 @@
     }
 
     .team-gallery-first {
-        background-image:url("../img/code_ground_students.jpg");
+        background-image:url("/img/code_ground_students.jpg");
         grid-column-start: 1;
         grid-column-end: 4;
     }
 
     .team-gallery-second {
-        background-image:url("../img/team_friday.jpg");
+        background-image:url("/img/team_friday.jpg");
         grid-column-start: 4;
         grid-column-end: end;
     }
 
     .team-gallery-third {
-        background-image:url("../img/martin_paunov_lecturer.jpg");
+        background-image:url("/img/martin_paunov_lecturer.jpg");
         grid-column-start: 1;
         grid-column-end: 3;
     }
 
     .team-gallery-fourth {
-        background-image:url("../img/students.jpg");
+        background-image:url("/img/students.jpg");
         grid-column-start: 3;
         grid-column-end: 5;
     }
 
     .team-gallery-fifth {
-        background-image:url("../img/students-behind.jpg");
+        background-image:url("/img/students-behind.jpg");
         grid-column-start: 5;
         grid-column-end: end;
     }
