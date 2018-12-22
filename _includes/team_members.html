@@ -1,14 +1,13 @@
-{% for member in site.team_members %}
-    <article>
-        {% assign avatarUrl = {{ site.baseUrl }} | append: '/' | append: {{ member.avatar }} %}
-        <div class="member-img" style="background-image: url({{ member.avatar }})">
-            <div class="member-socials">
-                <i class="fab fa-facebook"></i>
-                <i class="fab fa-facebook"></i>
-                <i class="fab fa-facebook"></i>
-            </div>
-        </div>
-        <h3>{{ member.name }}</h3>
-        <h4>{{ member.position }}</h4>
-    </article>
-{% endfor%}
+{% assign lecturers = site.team_members | where:"position", "Lecturer" %}
+<div id="lecturers" class="team-members-container">
+    {% for member in lecturers %}
+        {% include single_team_member.html %}
+    {% endfor%}
+</div>
+
+{% assign mentors = site.team_members | where:"position", "Mentor" %}
+<div id="mentors" class="team-members-container">
+    {% for member in mentors %}
+        {% include single_team_member.html %}
+    {% endfor%}
+</div>

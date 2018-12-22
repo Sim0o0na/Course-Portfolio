@@ -13,8 +13,29 @@ title: Team
 </section>
 <section class="team">
     <h1>Our Team</h1>
+        <ul class="team-members-controls">
+            <li>Lecturers</li>
+            <li>Mentors</li>
+            <li>Organization</li>
+        </ul>
     <div class="team-members-info">
         {% include team_members.html %}
+        <script>
+            $(window).ready(function() {
+                $(".team-members-controls > li").first().addClass("clicked");
+                $(".team-members-info > *").hide();
+                $("#lecturers").show();
+            })
+
+            $(".team-members-controls > li").click(function() {
+                let liText = $(this).text().toLowerCase();
+                $(".team-members-controls > li").removeClass("clicked");
+                $(".team-members-info > *").hide();
+                $("#" + liText).show();
+                $(this).addClass("clicked");
+                
+            })
+        </script>
     </div>  
 </section>
 {% include footer.html %}

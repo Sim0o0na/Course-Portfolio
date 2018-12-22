@@ -120,17 +120,18 @@ footer {
         border-right: 1px solid lightgray;
     }
 
-    @media screen and (max-width: 890px) {
-        footer > div, ul {
-            margin: 2em;
-        }
-    }
-
     @media screen and (max-width: 603px) {
         #footer-mailing-list {
             border: none;
         }
     }
+
+    @media screen and (max-width: 890px) {
+        text-align: center;
+        footer > div, ul {
+            margin: 2em;
+        }
+    }    
 }
 
 .image-description {
@@ -188,13 +189,6 @@ footer {
             p {
                 display: none;
             }
-
-            // &:hover {
-            //     color: $primary-orange-feedback;
-            //     p {
-            //         display: inherit;
-            //     }
-            // }
 
             i {
                 margin: 0.5em;

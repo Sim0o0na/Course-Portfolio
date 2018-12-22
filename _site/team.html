@@ -50,47 +50,89 @@
 </section>
 <section class="team">
     <h1>Our Team</h1>
+        <ul class="team-members-controls">
+            <li>Lecturers</li>
+            <li>Mentors</li>
+            <li>Organization</li>
+        </ul>
     <div class="team-members-info">
         
-    <article>
-        
-        <div class="member-img" style="background-image: url(/Course-Portfolio/img/team/ivo.jpg)">
-            <div class="member-socials">
-                <i class="fab fa-facebook"></i>
-                <i class="fab fa-facebook"></i>
-                <i class="fab fa-facebook"></i>
-            </div>
+<div id="lecturers" class="team-members-container">
+    
+        <article>
+    <div class="member-img" style="background-image: url(/Course-Portfolio/img/team/antonia.jpg)">
+        <div class="member-socials">
+            <i class="fab fa-facebook"></i>
+            <i class="fab fa-facebook"></i>
+            <i class="fab fa-facebook"></i>
         </div>
-        <h3>Ivailo Dimitrov</h3>
-        <h4>Lecturer</h4>
-    </article>
-
-    <article>
-        
-        <div class="member-img" style="background-image: url(/Course-Portfolio/img/team/koko.jpg)">
-            <div class="member-socials">
-                <i class="fab fa-facebook"></i>
-                <i class="fab fa-facebook"></i>
-                <i class="fab fa-facebook"></i>
-            </div>
+    </div>
+    <h3>Antonia Atanasova</h3>
+    <h4><span class="member-characteristics">Superpower: </span>Lecturer</h4>
+    <h4><span class="member-characteristics">Weapons: </span>C#, JS, CSS, HTML</h4>
+</article>
+    
+        <article>
+    <div class="member-img" style="background-image: url(/Course-Portfolio/img/team/ivo.jpg)">
+        <div class="member-socials">
+            <i class="fab fa-facebook"></i>
+            <i class="fab fa-facebook"></i>
+            <i class="fab fa-facebook"></i>
         </div>
-        <h3>Konstantin Mitev</h3>
-        <h4>Mentor</h4>
-    </article>
-
-    <article>
-        
-        <div class="member-img" style="background-image: url(/Course-Portfolio/img/team/martin.jpg)">
-            <div class="member-socials">
-                <i class="fab fa-facebook"></i>
-                <i class="fab fa-facebook"></i>
-                <i class="fab fa-facebook"></i>
-            </div>
+    </div>
+    <h3>Ivailo Dimitrov</h3>
+    <h4><span class="member-characteristics">Superpower: </span>Lecturer</h4>
+    <h4><span class="member-characteristics">Weapons: </span>C#, JS</h4>
+</article>
+    
+        <article>
+    <div class="member-img" style="background-image: url(/Course-Portfolio/img/team/martin.jpg)">
+        <div class="member-socials">
+            <i class="fab fa-facebook"></i>
+            <i class="fab fa-facebook"></i>
+            <i class="fab fa-facebook"></i>
         </div>
-        <h3>Martin Georgiev</h3>
-        <h4>Lecturer</h4>
-    </article>
+    </div>
+    <h3>Martin Georgiev</h3>
+    <h4><span class="member-characteristics">Superpower: </span>Lecturer</h4>
+    <h4><span class="member-characteristics">Weapons: </span>C#, PHP</h4>
+</article>
+    
+</div>
 
+
+<div id="mentors" class="team-members-container">
+    
+        <article>
+    <div class="member-img" style="background-image: url(/Course-Portfolio/img/team/koko.jpg)">
+        <div class="member-socials">
+            <i class="fab fa-facebook"></i>
+            <i class="fab fa-facebook"></i>
+            <i class="fab fa-facebook"></i>
+        </div>
+    </div>
+    <h3>Konstantin Mitev</h3>
+    <h4><span class="member-characteristics">Superpower: </span>Mentor</h4>
+    <h4><span class="member-characteristics">Weapons: </span>Java, JS</h4>
+</article>
+    
+</div>
+        <script>
+            $(window).ready(function() {
+                $(".team-members-controls > li").first().addClass("clicked");
+                $(".team-members-info > *").hide();
+                $("#lecturers").show();
+            })
+
+            $(".team-members-controls > li").click(function() {
+                let liText = $(this).text().toLowerCase();
+                $(".team-members-controls > li").removeClass("clicked");
+                $(".team-members-info > *").hide();
+                $("#" + liText).show();
+                $(this).addClass("clicked");
+                
+            })
+        </script>
     </div>  
 </section>
 <footer>

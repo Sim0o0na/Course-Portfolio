@@ -5,45 +5,60 @@
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: repeat(2, 47vh);
     grid-gap: 0.1em 0.1em;
-    transition: .5s ease;
-    backface-visibility: hidden;
 
-    div {
-        position: relative;
-        opacity: 1;
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center center;
+    $gallery-elements: team-gallery-first, team-gallery-second, team-gallery-third, team-gallery-fourth, team-gallery-fifth;
+
+    @each $element in $gallery-elements {
+        .#{$element} {
+            position: relative;
+            opacity: 1;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
     }
 
     .team-gallery-first {
-        background-image:url("/img/code_ground_students.jpg");
+        background-image:url("/Course-Portfolio/img/veronika_lecturer.jpg");
         grid-column-start: 1;
         grid-column-end: 4;
     }
 
     .team-gallery-second {
-        background-image:url("/img/team_friday.jpg");
+        background-image:url("/Course-Portfolio/img/team_friday.jpg");
         grid-column-start: 4;
         grid-column-end: end;
     }
 
     .team-gallery-third {
-        background-image:url("/img/martin_paunov_lecturer.jpg");
+        background-image:url("/Course-Portfolio/img/martin_happy.jpg");
         grid-column-start: 1;
         grid-column-end: 3;
     }
 
     .team-gallery-fourth {
-        background-image:url("/img/students.jpg");
+        background-image:url("/Course-Portfolio/img/antonia_lecturer.jpg");
         grid-column-start: 3;
         grid-column-end: 5;
     }
 
     .team-gallery-fifth {
-        background-image:url("/img/students-behind.jpg");
+        background-image:url("/Course-Portfolio/img/veronika_outside.jpg");
         grid-column-start: 5;
         grid-column-end: end;
+    }
+
+    @media screen and (max-width: 500px) {
+        display: flex;
+        flex-direction: column;
+        height: 200vh;
+
+        @each $element in $gallery-elements {
+            .#{$element} {
+                display: flex;
+                height: 25%;
+            }
+        }
     }
 }
 
@@ -57,22 +72,58 @@
         background: $primary-purple-darker-feedback;
     }
 
+    .team-members-controls {
+        margin: 0 auto;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+
+        li {
+            list-style: none;
+            padding: 0.5em;
+            background: $primary-purple-darker-feedback;
+            border-bottom: 1px solid $primary-purple-darker-feedback; 
+            width: 100%;
+
+            &:hover {
+                color: $primary-orange-feedback;
+                cursor: pointer;
+                border-bottom: 1px solid $primary-orange-feedback; 
+            }
+
+            &.clicked {
+                color: $primary-orange-feedback;
+                border-bottom: 1px solid $primary-orange-feedback; 
+            }
+        }
+    }
+
     .team-members-info {
         display: flex;
         justify-content: space-around;
         color: $primary-purple-feedback;
 
+        .team-members-container {
+            display: flex;
+            width: 100%;
+            justify-content: center;
+        }
+
+        .member-characteristics {
+            color: $primary-orange-feedback;
+        }
+
         article {
             background: white;
             height: 50vh;
             min-width: 120px;
-            min-height: 12s0px;
+            min-height: 120px;
             width: 20%;
             margin: 1em;
+            padding: 0.5em;
             display: flex;
             flex-direction: column;
-            justify-content: center;
-
+            
             h3 {
                 color: $primary-orange-feedback;
             }
@@ -126,7 +177,7 @@
     }
 
     @media screen and (max-width: 890px) {
-        .team-members-info {
+        .team-members-container {
             display: flex;
             flex-wrap: wrap;
             align-items: center;

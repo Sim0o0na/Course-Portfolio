@@ -65,7 +65,7 @@ p, textarea { font-family: 'Roboto', sans-serif; }
   .carousel input:checked ~ input + label { margin-left: 30%; } }
 :root { --font-size-initial: 12px; --font-size-lv2: 14px; --font-size-lv3: 16px; --font-size-lv4: 18px; --spacing-site: 2rem; --color-text-main: #000; }
 
-.content { height: 100vh; background-image: url("../img/students.jpg"); background-position: center; background-repeat: no-repeat; background-size: cover; }
+.content { height: 100vh; background-image: url("/Course-Portfolio/img/students.jpg"); background-position: center; background-repeat: no-repeat; background-size: cover; }
 
 .content:before { display: block; content: ''; height: 60%; }
 
@@ -127,7 +127,7 @@ form input[type="submit"]:hover { color: #FDAE6C; cursor: pointer; }
 @keyframes pop { 50% { transform: scale(1.2); } }
 :root { --font-size-initial: 12px; --font-size-lv2: 14px; --font-size-lv3: 16px; --font-size-lv4: 18px; --spacing-site: 2rem; --color-text-main: #000; }
 
-.content { height: 100vh; background-image: url("../img/students.jpg"); background-position: center; background-repeat: no-repeat; background-size: cover; }
+.content { height: 100vh; background-image: url("/Course-Portfolio/img/students.jpg"); background-position: center; background-repeat: no-repeat; background-size: cover; }
 
 .content:before { display: block; content: ''; height: 60%; }
 
@@ -186,8 +186,9 @@ footer input { outline: none; border: none; margin-top: 0.5em; padding: 0.5em; }
 footer input[type="submit"] { background: white; color: #3A599C; }
 footer input[type="submit"]:hover { background: #FDAE6C; }
 footer #footer-mailing-list { padding-right: 3em; border-right: 1px solid lightgray; }
-@media screen and (max-width: 890px) { footer footer > div, footer ul { margin: 2em; } }
 @media screen and (max-width: 603px) { footer #footer-mailing-list { border: none; } }
+@media screen and (max-width: 890px) { footer { text-align: center; }
+  footer footer > div, footer ul { margin: 2em; } }
 
 .image-description { color: white; width: 40em; position: absolute; bottom: 5em; left: 10%; }
 .image-description .image-group-technology { border: 3px solid white; display: inline-block; padding: 0.5em; text-transform: uppercase; }
@@ -203,18 +204,34 @@ footer #footer-mailing-list { padding-right: 3em; border-right: 1px solid lightg
 
 :root { --font-size-initial: 12px; --font-size-lv2: 14px; --font-size-lv3: 16px; --font-size-lv4: 18px; --spacing-site: 2rem; --color-text-main: #000; }
 
-#team-gallery { display: grid; grid-template-columns: repeat(6, 1fr); grid-template-rows: repeat(2, 47vh); grid-gap: 0.1em 0.1em; transition: .5s ease; backface-visibility: hidden; }
-#team-gallery div { position: relative; opacity: 1; background-size: cover; background-repeat: no-repeat; background-position: center center; }
-#team-gallery .team-gallery-first { background-image: url("/img/code_ground_students.jpg"); grid-column-start: 1; grid-column-end: 4; }
-#team-gallery .team-gallery-second { background-image: url("/img/team_friday.jpg"); grid-column-start: 4; grid-column-end: end; }
-#team-gallery .team-gallery-third { background-image: url("/img/martin_paunov_lecturer.jpg"); grid-column-start: 1; grid-column-end: 3; }
-#team-gallery .team-gallery-fourth { background-image: url("/img/students.jpg"); grid-column-start: 3; grid-column-end: 5; }
-#team-gallery .team-gallery-fifth { background-image: url("/img/students-behind.jpg"); grid-column-start: 5; grid-column-end: end; }
+#team-gallery { display: grid; grid-template-columns: repeat(6, 1fr); grid-template-rows: repeat(2, 47vh); grid-gap: 0.1em 0.1em; }
+#team-gallery .team-gallery-first { position: relative; opacity: 1; background-size: cover; background-repeat: no-repeat; background-position: center center; }
+#team-gallery .team-gallery-second { position: relative; opacity: 1; background-size: cover; background-repeat: no-repeat; background-position: center center; }
+#team-gallery .team-gallery-third { position: relative; opacity: 1; background-size: cover; background-repeat: no-repeat; background-position: center center; }
+#team-gallery .team-gallery-fourth { position: relative; opacity: 1; background-size: cover; background-repeat: no-repeat; background-position: center center; }
+#team-gallery .team-gallery-fifth { position: relative; opacity: 1; background-size: cover; background-repeat: no-repeat; background-position: center center; }
+#team-gallery .team-gallery-first { background-image: url("/Course-Portfolio/img/veronika_lecturer.jpg"); grid-column-start: 1; grid-column-end: 4; }
+#team-gallery .team-gallery-second { background-image: url("/Course-Portfolio/img/team_friday.jpg"); grid-column-start: 4; grid-column-end: end; }
+#team-gallery .team-gallery-third { background-image: url("/Course-Portfolio/img/martin_happy.jpg"); grid-column-start: 1; grid-column-end: 3; }
+#team-gallery .team-gallery-fourth { background-image: url("/Course-Portfolio/img/antonia_lecturer.jpg"); grid-column-start: 3; grid-column-end: 5; }
+#team-gallery .team-gallery-fifth { background-image: url("/Course-Portfolio/img/veronika_outside.jpg"); grid-column-start: 5; grid-column-end: end; }
+@media screen and (max-width: 500px) { #team-gallery { display: flex; flex-direction: column; height: 200vh; }
+  #team-gallery .team-gallery-first { display: flex; height: 25%; }
+  #team-gallery .team-gallery-second { display: flex; height: 25%; }
+  #team-gallery .team-gallery-third { display: flex; height: 25%; }
+  #team-gallery .team-gallery-fourth { display: flex; height: 25%; }
+  #team-gallery .team-gallery-fifth { display: flex; height: 25%; } }
 
 .team { background: #3A599C; width: 100%; text-align: center; color: white; }
 .team h1 { background: #274179; }
+.team .team-members-controls { margin: 0 auto; width: 100%; display: flex; justify-content: space-around; }
+.team .team-members-controls li { list-style: none; padding: 0.5em; background: #274179; border-bottom: 1px solid #274179; width: 100%; }
+.team .team-members-controls li:hover { color: #FDAE6C; cursor: pointer; border-bottom: 1px solid #FDAE6C; }
+.team .team-members-controls li.clicked { color: #FDAE6C; border-bottom: 1px solid #FDAE6C; }
 .team .team-members-info { display: flex; justify-content: space-around; color: #3A599C; }
-.team .team-members-info article { background: white; height: 50vh; min-width: 120px; min-height: 12s0px; width: 20%; margin: 1em; display: flex; flex-direction: column; justify-content: center; }
+.team .team-members-info .team-members-container { display: flex; width: 100%; justify-content: center; }
+.team .team-members-info .member-characteristics { color: #FDAE6C; }
+.team .team-members-info article { background: white; height: 50vh; min-width: 120px; min-height: 120px; width: 20%; margin: 1em; padding: 0.5em; display: flex; flex-direction: column; }
 .team .team-members-info article h3 { color: #FDAE6C; }
 .team .team-members-info article .member-img { margin: 0 auto; width: 90%; height: 60%; min-width: 100px; min-height: 100px; background-position: center; background-repeat: no-repeat; background-size: cover; display: flex; justify-content: flex-end; }
 .team .team-members-info article .member-img:hover .member-socials { display: flex; flex-direction: column; justify-content: space-around; }
@@ -222,5 +239,5 @@ footer #footer-mailing-list { padding-right: 3em; border-right: 1px solid lightg
 .team .team-members-info article .member-img .member-socials i:hover { color: #FDAE6C; }
 @media screen and (max-width: 500px) { .team .team-members-info { display: flex; flex-direction: column; align-items: center; }
   .team .team-members-info article { width: 70%; } }
-@media screen and (max-width: 890px) { .team .team-members-info { display: flex; flex-wrap: wrap; align-items: center; }
-  .team .team-members-info article { width: 50%; } }
+@media screen and (max-width: 890px) { .team .team-members-container { display: flex; flex-wrap: wrap; align-items: center; }
+  .team .team-members-container article { width: 50%; } }
